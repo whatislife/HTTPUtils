@@ -30,7 +30,7 @@ import org.junit.Test;
 import de.taimos.httputils.callbacks.HTTPStringCallback;
 
 /**
- * @author thoeger
+ * @author songjian
  * 
  */
 public class Tester1 {

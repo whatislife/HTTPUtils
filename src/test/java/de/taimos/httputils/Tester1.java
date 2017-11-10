@@ -115,4 +115,13 @@ public class Tester1 {
 		WS.url("http://www.sdfsdfdfs.de").timeout(2000).get();
 	}
 	
+	@Test
+	public void testCPS(){
+		String jsonParam = "{\"logList\": [],\"parkId2\": \"e383d617-1624-4a3b-a410-7efbbda45115\"}";
+		String url = "http://localhost:8081/sym_cps/cps/log/fetch";
+		HttpResponse response = WS.url(url).contentType("application/json")
+				.body(jsonParam).timeout(10).post();
+		String responsStr = WS.getResponseAsString(response);
+		System.out.println(responsStr);
+	}
 }
